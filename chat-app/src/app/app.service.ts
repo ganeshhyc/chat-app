@@ -12,6 +12,8 @@ import { HttpErrorResponse, HttpParams } from '@angular/common/http';
 export class AppService {
   private url = 'https://chatapi.edwisor.com';
   constructor(public http:HttpClient) { }
+  public getUserInfoFromLocalStorage=()=>JSON.parse(localStorage.getItem('userInfo'))
+  public setUserInfoInLocalStorage=(data)=>localStorage.setItem('userInfo',JSON.stringify(data))
   public signupFunction(data): Observable <any> {
     const params = new HttpParams()
       .set('firstname', data.firstname)
