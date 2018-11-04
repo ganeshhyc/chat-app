@@ -7,7 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
     RouterModule.forChild(
       [
         { path:'signup', component:SignupComponent }
